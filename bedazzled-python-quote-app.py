@@ -4,7 +4,7 @@ import logging
 from flask import Flask
 from math import sqrt
 import urllib, urllib2
-
+  
 app = Flask(__name__)
 quote_url = "http://dev.markitondemand.com/Api/v2/Quote/json?symbol="
 quote_ret_val = ""
@@ -38,6 +38,7 @@ def get_quote(company_symbol):
     #print tot
     return quote_ret_val
 
-port = os.getenv('VCAP_APP_PORT', '5000')
+port = os.getenv('PORT', '5000')
+print port 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=int(port))
