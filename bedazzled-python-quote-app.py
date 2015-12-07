@@ -38,6 +38,7 @@ def get_quote(company_symbol):
     #print tot
     return quote_ret_val
 
+
 port = os.getenv('PORT', '5000')
 print port 
 if __name__ == "__main__":

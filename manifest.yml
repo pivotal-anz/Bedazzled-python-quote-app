@@ -1,9 +1,8 @@
 applications:
-- disk_quota: 1024M
+- name: bedazzled-python-quote-app
   buildpack: https://github.com/cloudfoundry/python-buildpack#v1.5.1
-  name: bedazzled-python-quote-app.py
+  host: bedazzled-python-quote-app
   path: .
   domain: cfapps.io
   instances: 1
   memory: 512M
-  random-route: true
